@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    color: #2c2c2c;
+}
+
+a {
+    text-decoration: none;
+    color: #f2b20b; /* Yellow */
+}
+
+a:hover {
+    color: #333;
+    text-shadow: 0 0 10px #f2b20b, 0 0 20px #f2b20b;
+}
+
+/* Header */
+header {
+    background: #333;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+}
+
+header h1 {
+    color: #f2b20b; /* Yellow */
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a.btn {
+    background: #f2b20b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.btn:hover {
+    background: #333;
+    color: #f2b20b;
+    box-shadow: 0 0 10px #f2ee0b;
+}
+
+/* Sections */
+.section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #bce71f 0%, #333 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+button.submit-btn {
+    background-color: #f2b20b;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #333;
+    color: #f2b20b;
+    transform: scale(1.1);
+}
+
+/* Proyecto Cards */
+.proyecto {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.proyecto h3 {
+    color: #f2b20b;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    button.submit-btn {
+        width: 100%;
+    }
+}
+

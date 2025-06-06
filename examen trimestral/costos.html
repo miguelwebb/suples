@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Costos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Nuevos efectos */
+    .filtro-img {
+      filter: grayscale(60%) brightness(1.1);
+      border: 4px dashed #f2b20b;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+      max-width: 300px;
+      transition: filter 0.5s ease;
+    }
+
+    .filtro-img:hover {
+      filter: none;
+    }
+
+    .tarjetas-3d {
+      perspective: 1000px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .proyecto {
+      transition: transform 0.6s ease;
+      transform-style: preserve-3d;
+    }
+
+    .proyecto:hover {
+      transform: rotateY(10deg);
+    }
+
+    form {
+      animation: entrada-formulario 2s ease-in-out;
+    }
+
+    @keyframes entrada-formulario {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    a:link {
+      color: #f2b20b;
+    }
+
+    a:visited {
+      color: #b28a0b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Costos Estimados</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="btn">Inicio</a></li>
+        <li><a href="proyectos.html" class="btn">Proyectos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section tarjetas-3d">
+    <div class="proyecto">
+      <h3>Puente de Acero</h3>
+      <p>Costo estimado: <strong>$1,500,000</strong></p>
+      <img src="images.jpg" alt="Puente de acero" class="filtro-img">
+    </div>
+    <div class="proyecto">
+      <h3>Edificio Empresarial</h3>
+      <p>Costo estimado: <strong>$3,200,000</strong></p>
+      <img src="ed.jpg" alt="Edificio Empresarial" class="filtro-img">
+    </div>
+  </section>
+
+  <section class="section borde-punteado">
+    <h2>Solicita una Cotización</h2>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo</label>
+        <input type="text" id="correo" name="correo">
+      </div>
+      <div class="form-group">
+        <label for="detalles">Detalles del proyecto</label>
+        <input type="text" id="detalles" name="detalles">
+      </div>
+      <button class="submit-btn">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Ingeniero Civil &copy; 2025</p>
+  </footer>
+</body>
+</html>
+
+
+
